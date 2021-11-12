@@ -1,0 +1,170 @@
+{
+  "produtos": [
+    {
+      "URLimage": "https://images.kabum.com.br/produtos/fotos/99520/gabinete-gamer-sharkoon-tg4-rgb-sem-fonte-mid-tower-usb-3-0-4-fans-preto-com-lateral-em-vidro_1545134495_gg.jpg",
+      "name": "Gabinete Gamer Sharkoon",
+      "cost": "459.90",
+      "description": "Gabinete para computador",
+      "supplier": "Kabum",
+      "group": "Periférico",
+      "id": 1
+    },
+    {
+      "URLimage": "https://images.kabum.com.br/produtos/fotos/130864/monitor-gamer-ozone-dsp25-pro-24-5-full-hd-freesync-g-sync-144-hz-1-ms-frameless-ozdsp25pro-fless_1607086085_gg.jpg",
+      "name": "Monitor Gamer Ozone DSP25 Pro",
+      "cost": "1799.90",
+      "description": "Este monitor Ozone incorpora as tecnologias AMD FreeSync e NVIDIA G-Sync.",
+      "supplier": "Kabum",
+      "group": "Monitores",
+      "id": 2
+    },
+    {
+      "URLimage": "https://images.kabum.com.br/produtos/fotos/179446/notebook-lenovo-ultrafino-ideapad-s145-ryzen-5-3500u-8gb-256gb-ssd-m-2-nvm4e-15-6-dolby-audio-windows-10-home-prata-81v70008br_1628002662_gg.jpg",
+      "name": "Notebook Lenovo Ultrafino Ideapad S145",
+      "cost": "4199.90",
+      "description": "Notebook IdeaPad S145 (15\" AMD) perfeito para computação diária, com design sofisticado, leve e compacto, possui tela antirreflexo de 15.6",
+      "supplier": "Kabum",
+      "group": "Notebook",
+      "id": 3
+    },
+    {
+      "URLimage": "https://images.kabum.com.br/produtos/fotos/102436/processador-amd-ryzen-7-3700x-32mb-3-6ghz-4-6ghz-max-turbo-amd4-100-100000071box_processador-amd-ryzen-7-3700x-32mb-3-6ghz-4-6ghz-max-turbo-amd4-100-100000071box_1562601118_gg.jpg",
+      "name": "Processador AMD Ryzen 7 3700X",
+      "cost": "2289.90",
+      "description": "Processador AMD Ryzen 7 3700X Inovação extraordinária Processadores AMD Ryzen de 3ª geração inclui compatibilidade com a primeira conectividade PCIe® 4.0 do mundo, para possibilitar que as placas-mãe, gráficos e tecnologias de armazenamento mais avançadas estejam disponível.",
+      "supplier": "Kabum",
+      "group": "Processador",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "user": "Henrique",
+      "password": "123456"
+    }
+  ],
+  "empresas": [
+    {
+      "social": "ATOS SERVICOS DE TECNOLOGIA DA INFORMACAO DO BRASIL LTDA.",
+      "fantasy_name": "Atos Serviços de Tecnologia",
+      "CNPJ": "02804955/5466-34",
+      "email": "contato@atos.com.br",
+      "CEP": "06455-000",
+      "address": "Alameda Araguaia",
+      "number": "3641",
+      "district": "ALPHAVILLE INDUSTRIAL",
+      "city": "Barueri",
+      "complement": "Próximo ao mercado",
+      "coordinates": [
+        "-23.4972324",
+        "-46.8397225"
+      ],
+      "id": 1
+    },
+    {
+      "social": "TATA CONSULTANCY SERVICES DO BRASIL LTDA",
+      "fantasy_name": "TATA CONSULTANCY SERVICES DO BRASIL",
+      "CNPJ": "04.266.331/0002-00",
+      "email": "contato@tcs.com.br",
+      "CEP": "01311-100",
+      "address": "Avenida Paulista",
+      "number": "949",
+      "district": "CERQUEIRA CESAR",
+      "city": "SÃO PAULO",
+      "complement": "Próximo ao Teatro Gazeta",
+      "coordinates": [
+        "-23.5657758",
+        "-46.6541278"
+      ],
+      "id": 2
+    },
+    {
+      "social": "KABUM COMERCIO ELETRONICO S.A.",
+      "fantasy_name": "KABUM COMERCIO ELETRONICO S.A.",
+      "CNPJ": "05.570.714/0001-59",
+      "email": "contato@kabum.com.br",
+      "CEP": "13480-013",
+      "address": "Rua Carlos Gomes",
+      "number": "1321",
+      "district": "CENTRO",
+      "city": "Limeira",
+      "complement": "Próximo ao McDonalds",
+      "coordinates": [
+        "-22.5696086",
+        "-47.4098735"
+      ],
+      "id": 3
+    },
+    {
+      "social": "GRENDENE S A",
+      "fantasy_name": "GRENDENE",
+      "CNPJ": "89.850.341/0019-99",
+      "email": "contato@grendene.com.br",
+      "CEP": "01426-003",
+      "address": "Rua Oscar Freire",
+      "number": "827",
+      "district": "CERQUEIRA CESAR",
+      "city": "São Paulo",
+      "complement": "Próximo a Riachuelo",
+      "coordinates": [
+        "-23.5638367",
+        "-46.6692184"
+      ],
+      "id": 4
+    },
+    {
+      "social": "INVOLVES SOLUCOES TECNOLOGICAS S/A",
+      "fantasy_name": "INVOLVES TECNOLOGIA",
+      "CNPJ": "10.903.643/0001-07",
+      "email": "contato@involves.com.br",
+      "CEP": "88085-150",
+      "address": "Avenida Patricio Caldeira de Andrade",
+      "number": "1156",
+      "district": "CAPOEIRAS",
+      "city": "Florianopólis",
+      "complement": "Próximo ao shopping",
+      "coordinates": [
+        "-27.6018823",
+        "-48.5944004"
+      ],
+      "id": 5
+    },
+    {
+      "social": "\tTERABYTE ATACADO E VAREJO DE PRODUTOS DE INFORMATICA LTDA",
+      "fantasy_name": "TERABYTE SHOP",
+      "CNPJ": "07.993.973/0001-18",
+      "email": "contato@terabyte.com.br",
+      "CEP": "80030-000",
+      "address": "Avenida Joao Gualberto",
+      "number": "1259",
+      "district": "ALTO DA GLORIA",
+      "city": "CURITIBA",
+      "complement": "Próximo ao Banco do Brasil",
+      "coordinates": [
+        "-25.4161915",
+        "-49.2629303"
+      ],
+      "id": 6
+    }
+  ],
+  "fornecedores": [
+    "Kabum",
+    "Amazon",
+    "Dell",
+    "Pichau",
+    "Terabyte",
+    "Mercado Livre"
+  ],
+  "categorias": [
+    "Computador",
+    "HD",
+    "Monitores",
+    "Placa de vídeo",
+    "Notebook",
+    "Periférico",
+    "Smartphone",
+    "Processador",
+    "Fonte"
+  ]
+}
