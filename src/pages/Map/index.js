@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import Menu from "../../components/Menu";
+import URL_SERVER from "../../util/servers";
 
 const Map = () => {
 
@@ -9,7 +10,7 @@ const Map = () => {
   useEffect(() => {
 
     async function getCompanies() {
-      const result = await fetch("http://localhost:3333/empresas");
+      const result = await fetch(`${URL_SERVER}/empresas`);
       const data = await result.json();
       setCompanies(data);
     }

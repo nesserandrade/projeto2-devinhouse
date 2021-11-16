@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import URL_SERVER from "../../util/servers";
 
 const FormCompany = () => {
   const navigate = useNavigate();
@@ -82,7 +83,7 @@ const FormCompany = () => {
     event.target.checkValidity();
 
     await fetch(
-      'http://localhost:3333/empresas',
+      `${URL_SERVER}/empresas`,
       {
         headers: {
           'Accept': 'application/json',

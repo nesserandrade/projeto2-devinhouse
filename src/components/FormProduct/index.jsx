@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import URL_SERVER from "../../util/servers";
 
 const FormProduct = () => {
   useEffect(() => {
     async function getSupplier() {
-      const result = await fetch("http://localhost:3333/fornecedores");
+      const result = await fetch(`${URL_SERVER}/fornecedores`);
       const data = await result.json();
       setSuppliers(data);
     }
@@ -12,7 +13,7 @@ const FormProduct = () => {
     getSupplier();
 
     async function getGroup() {
-      const result = await fetch("http://localhost:3333/categorias");
+      const result = await fetch(`${URL_SERVER}/categorias`);
       const data = await result.json();
       setGroups(data);
     }
@@ -65,7 +66,7 @@ const FormProduct = () => {
     event.target.checkValidity();
 
     await fetch(
-        'http://localhost:3333/produtos',
+      `${URL_SERVER}/produtos`,
         {
           headers: {
             'Accept': 'application/json',

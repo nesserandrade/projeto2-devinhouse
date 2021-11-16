@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
+import URL_SERVER from "../../util/servers";
 
 const FormLogin = () => {
 
@@ -20,7 +21,7 @@ const [password, setPassword] = useState("");
   const handleSubmit = async (event) => {
     event.preventDefault();
     event.target.checkValidity();
-    let response = await fetch('http://localhost:3333/users')
+    let response = await fetch(`${URL_SERVER}/users`)
     let login = await response.json()
     if (login[0].user !== user) {
         console.log(login[0].user)

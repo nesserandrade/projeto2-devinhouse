@@ -1,12 +1,13 @@
 import { React, useState, useEffect } from "react";
 import Menu from "../../components/Menu";
 import ProductItem from "../../components/ProductItem";
+import URL_SERVER from "../../util/servers";
 
 const ListProducts = () => {
 
     useEffect(() => {
         async function getProducts() {
-          const result = await fetch("http://localhost:3333/produtos");
+          const result = await fetch(`${URL_SERVER}/produtos`);
           const data = await result.json();
           setProducts(data);
         }
