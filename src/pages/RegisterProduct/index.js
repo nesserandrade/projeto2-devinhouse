@@ -5,7 +5,7 @@ import FormProduct from "../../components/FormProduct";
 const RegisterProduct = () => {
     return (
         <>
-        <Menu title="Painel" />
+        <Menu title="Novo produto" />
         <FormProduct />
         </>
     )

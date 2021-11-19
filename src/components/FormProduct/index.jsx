@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import URL_SERVER from "../../util/servers";
+import { Link } from "react-router-dom";
 
 const FormProduct = () => {
   useEffect(() => {
@@ -62,35 +63,42 @@ const FormProduct = () => {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    event.target.checkValidity();
+    try {
+      event.preventDefault();
+      event.target.checkValidity();
 
-    await fetch(
-      `${URL_SERVER}/produtos`,
-        {
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          method: "POST",
-          body: JSON.stringify({
-            "URLimage": URLimage,
-            "name": name,
-            "cost": cost,
-            "description": description,
-            "supplier": supplier,
-            "group": group,
-          })
-        }
-      );
-      alert("Produto cadastrado com sucesso!")
-      navigate("/listproducts")
+      await fetch(`${URL_SERVER}/produtos`, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          URLimage: URLimage,
+          name: name,
+          cost: cost,
+          description: description,
+          supplier: supplier,
+          group: group,
+        }),
+      });
+      alert("Produto cadastrado com sucesso!");
+      navigate("/listproducts");
+    } catch (error) {
+      alert("Ocorreu um erro na sua requisição");
+    }
   };
   return (
     <>
       <div className="containerLog">
         <form className="formLog" onSubmit={handleSubmit}>
-         {URLimage && <img className="img-product" src={URLimage} alt="Coloque a URL correta da imagem" />}
+          {URLimage && (
+            <img
+              className="img-product"
+              src={URLimage}
+              alt="Coloque a URL correta da imagem"
+            />
+          )}
           <label>URL da imagem:</label>
           <input
             type="text"
@@ -126,7 +134,8 @@ const FormProduct = () => {
             rows={5}
             value={description}
             onChange={handleChangeDescription}
-            placeholder="Descreva o produto"
+            placeholder="Descreva o produto. Max: 250 caracteres"
+            maxLength={250}
           />
 
           <label>Fornecedor:</label>
@@ -153,7 +162,10 @@ const FormProduct = () => {
             ))}
           </select>
 
-          <input className="sendLog" type="submit" value="Enviar" />
+          <Link to="/map">
+            <button className="sendLog">Cancelar</button>
+          </Link>
+          <input className="sendLog" type="submit" value="Salvar" />
         </form>
       </div>
     </>

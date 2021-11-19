@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import URL_SERVER from "../../util/servers";
+import { Link } from "react-router-dom";
 
 const FormCompany = () => {
   const navigate = useNavigate();
@@ -79,34 +80,35 @@ const FormCompany = () => {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    try {
+      event.preventDefault();
     event.target.checkValidity();
 
-    await fetch(
-      `${URL_SERVER}/empresas`,
-      {
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        method: "POST",
-        body: JSON.stringify({
-          "social": social,
-          "fantasy_name": fantasyname,
-          "CNPJ": CNPJ,
-          "email": email,
-          "CEP": CEP,
-          "address": address,
-          "number": number,
-          "district": district,
-          "city": city,
-          "complement": complement,
-          "coordinates": [latitude, longitude]
-        })
-      }
-    );
-    alert("Empresa cadastrada com sucesso!")
-    navigate("/map")
+    await fetch(`${URL_SERVER}/empresas`, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        social: social,
+        fantasy_name: fantasyname,
+        CNPJ: CNPJ,
+        email: email,
+        CEP: CEP,
+        address: address,
+        number: number,
+        district: district,
+        city: city,
+        complement: complement,
+        coordinates: [latitude, longitude],
+      }),
+    });
+    alert("Empresa cadastrada com sucesso!");
+    navigate("/map");
+    } catch (error) {
+      alert("Ocorreu um erro na sua requisição.")
+    }
   };
   return (
     <>
@@ -231,7 +233,9 @@ const FormCompany = () => {
             placeholder="Digite a longitude"
             required
           ></input>
-
+          <Link to="/map">
+            <button className="sendLog">Cancelar</button>
+          </Link>
           <input className="sendLog" type="submit" value="Enviar" />
         </form>
       </div>

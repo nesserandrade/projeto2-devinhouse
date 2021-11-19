@@ -1,9 +1,9 @@
 import React from "react";
-import Menu from "../../components/Menu";
+import MenuHome from "../../components/MenuHome";
 
 const Home = () => {
     return (
-        <Menu title="Painel" />
+        <MenuHome title="SGI" />
     )
 }
 

@@ -60,7 +60,7 @@ table {
 .header-container {
   height: 75px;
   width: 100%;
-  background-color: #272727;
+  background-color: #fc4949;
   display: flex;
   align-items: center;
 }
@@ -77,7 +77,8 @@ table {
   padding: 10px;
   margin-right: 10px;
   border-radius: 10px;
-  background-color: #3786bb;
+  background-color: #7B1D41;
+  color: white;
 }
 
 .formLog {
@@ -85,12 +86,14 @@ table {
   flex-direction: column;
   width: 300px;
   margin-top: 100px;
+  color: white;
 }
 
 .sendLog {
   margin-top: 10px;
   width: 300px;
-  background-color: #3786bb;
+  background-color: #fc4949;
+  color: white;
 }
 
 .containerLog {
@@ -104,16 +107,15 @@ table {
   object-fit: cover;
   border-color: black;
   border: 1px solid black;
-  background-color: white;
   margin: 20px;
   flex-basis: 40%;
 }
 
 .product-item {
   width: 300px;
-  height: 450px;
-  border: 1px solid black;
-  background-color: #3786bb;
+  height: 400px;
+  border: 2px solid black;
+  background-color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -129,24 +131,27 @@ table {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .product-description {
-  font-size: 10px;
+  font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 10px;
+  margin: 20px;
+  color: black;
 }
 
 .product-name {
-  font-size: 12px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  margin: 20px;
 }
 
 .product-cost {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: #5252A3;
 }
 
 .product-body {
@@ -155,4 +160,50 @@ table {
   flex-direction: column;
   flex-basis: 50%;
   align-items: center;
+}
+
+textarea {
+  resize: none;
+}
+
+.product-hover {
+  width: 300px;
+  height: 400px;
+  border: 2px solid black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.product-groups {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5252A3;
+  margin: 10px;
+}
+
+.product-group {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5252A3;
+  margin: 10px;
+}
+
+.product-supplier {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5252A3;
+  margin: 10px;
+}
+
+body {
+  background-color: #5252A3;
 }

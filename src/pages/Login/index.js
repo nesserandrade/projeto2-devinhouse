@@ -1,11 +1,11 @@
 import React from "react";
-import Menu from "../../components/Menu";
+import MenuHome from "../../components/MenuHome";
 import FormLogin from "../../components/FormLogin";
 
 const Login = () => {
   return (
     <>
-      <Menu title="Painel" />
+      <MenuHome title="Login" />
       <FormLogin />
     </>
   );

@@ -21,7 +21,7 @@ const Map = () => {
 
   return (
       <>
-      <Menu />
+      <Menu title="Mapa de empresas" />
     <div className="container-mapa">
       <MapContainer center={[-15.7801, -47.9292]} zoom={4} scrollWheelZoom={true}>
         <TileLayer

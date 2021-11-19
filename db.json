@@ -15,7 +15,7 @@
       "cost": "1799.90",
       "description": "Este monitor Ozone incorpora as tecnologias AMD FreeSync e NVIDIA G-Sync.",
       "supplier": "Kabum",
-      "group": "Monitores",
+      "group": "Monitor",
       "id": 2
     },
     {
@@ -31,10 +31,19 @@
       "URLimage": "https://images.kabum.com.br/produtos/fotos/102436/processador-amd-ryzen-7-3700x-32mb-3-6ghz-4-6ghz-max-turbo-amd4-100-100000071box_processador-amd-ryzen-7-3700x-32mb-3-6ghz-4-6ghz-max-turbo-amd4-100-100000071box_1562601118_gg.jpg",
       "name": "Processador AMD Ryzen 7 3700X",
       "cost": "2289.90",
-      "description": "Processador AMD Ryzen 7 3700X Inovação extraordinária Processadores AMD Ryzen de 3ª geração inclui compatibilidade com a primeira conectividade PCIe® 4.0 do mundo, para possibilitar que as placas-mãe, gráficos e tecnologias de armazenamento mais avançadas estejam disponível.",
+      "description": "Processador AMD Ryzen 7 3700X Inovação extraordinária Processadores AMD Ryzen de 3ª geração inclui compatibilidade com a primeira conectividade PCIe® 4.0 do mundo.",
       "supplier": "Kabum",
       "group": "Processador",
       "id": 4
+    },
+    {
+      "URLimage": "https://images.kabum.com.br/produtos/fotos/154275/smartphone-motorola-moto-g100-5g-256gb-ram-12gb-octa-core-camera-quadrupla-64mp-5000mah-luminious-ocean-pam80052br_1616618134_gg.jpg",
+      "name": "Smartphone Motorola Moto G100 5G",
+      "cost": "2799",
+      "description": "MOTO G100 CONECTIVIDADE NA POTÊNCIA MÁXIMA COM A PLATAFORMA READY FOR Com a plataforma Ready For, o smartphone moto g100 tem conectividade na potência máxima. Através de um cabo USB-C® habilitado para vídeo.",
+      "supplier": "Kabum",
+      "group": "Smartphone",
+      "id": 5
     }
   ],
   "users": [
@@ -159,7 +168,7 @@
   "categorias": [
     "Computador",
     "HD",
-    "Monitores",
+    "Monitor",
     "Placa de vídeo",
     "Notebook",
     "Periférico",

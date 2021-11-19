@@ -5,7 +5,7 @@ import FormCompany from "../../components/FormCompany";
 const RegisterCompany = () => {
     return (
         <>
-        <Menu title="Cadastre uma nova empresa" />
+        <Menu title="Nova empresa" />
         <FormCompany />
         </>
     )

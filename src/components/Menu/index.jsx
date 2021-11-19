@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class Menu extends React.Component {
-  render() {
+const Menu = ({title}) => {
     return (
       <header className="header-container">
-        <h1 className="header-title">{this.props.title}</h1>
+        <h1 className="header-title">{title}</h1>
         <Link to="/map">
         <button className="botao-menu">Mapa de empresas</button>
         </Link>
@@ -24,6 +23,5 @@ class Menu extends React.Component {
       </header>
     );
   }
-}
 
 export default Menu;
