@@ -17,8 +17,8 @@ const Menu = ({title}) => {
         <Link to="/listproducts">
         <button className="botao-menu">Listar produtos</button>
         </Link>
-        <Link to="/login">
-        <button className="botao-menu">Login</button>
+        <Link to="/">
+        <button className="botao-menu">Logout</button>
         </Link>
       </header>
     );

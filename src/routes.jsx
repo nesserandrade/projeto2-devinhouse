@@ -1,6 +1,5 @@
 import Home from "./pages/Home";
 import Map from "./pages/Map"
-import Login from "./pages/Login"
 import RegisterCompany from "./pages/RegisterCompany";
 import RegisterProduct from "./pages/RegisterProduct";
 import { Routes, Route } from "react-router-dom";
@@ -14,8 +13,6 @@ const Router = () => {
         <Route exact path="/registercompany" element={<RegisterCompany />}/>
 
         <Route exact path="/registerproduct" element={<RegisterProduct />}/>
-
-        <Route exact path ="/login" element={<Login />} />
 
         <Route exact path="/" element={<Home />} />
 
