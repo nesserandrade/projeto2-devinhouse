@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import URL_SERVER from "../../util/servers";
-import { Link } from "react-router-dom";
 
 const FormProduct = () => {
   useEffect(() => {
@@ -23,6 +22,7 @@ const FormProduct = () => {
   }, []);
 
   const navigate = useNavigate();
+
   const [URLimage, setURLImage] = useState("");
   const [name, setName] = useState("");
   const [cost, setCost] = useState(0);
@@ -66,6 +66,37 @@ const FormProduct = () => {
     try {
       event.preventDefault();
       event.target.checkValidity();
+
+      if (!name) {
+        alert('Nome do produto é obrigatório')
+        return;
+      }
+
+      if (!cost) {
+        alert('Custo do produto é obrigatório')
+        return;
+      }
+
+      if (!description) {
+        alert('Descrição do produto é obrigatória')
+        return;
+      }
+
+      if (!supplier) {
+        alert('Fornecedor do produto é obrigatório')
+        return;
+      }
+
+      if (!group) {
+        alert('Categoria do produto é obrigatória')
+        return;
+      }
+
+      if (!URLimage) {
+        alert('Imagem do produto é obrigatória')
+        return;
+      }
+
 
       await fetch(`${URL_SERVER}/produtos`, {
         headers: {
@@ -152,7 +183,7 @@ const FormProduct = () => {
             ))}
           </select>
 
-          <label>Grupo:</label>
+          <label>Categoria:</label>
           <select name="group" value={group} onChange={handleChangeGroup}>
             <option value="" selected disabled>
               Selecione..

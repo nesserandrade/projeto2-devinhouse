@@ -61,7 +61,7 @@ const FormLogin = () => {
             required
           ></input>
 
-          <input className="sendLog" type="submit" value="Salvar" />
+          <input className="sendLog" type="submit" value="Logar" />
         </form>
       </div>
     </>

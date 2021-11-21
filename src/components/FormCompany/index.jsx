@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import URL_SERVER from "../../util/servers";
-import { Link } from "react-router-dom";
 
 const FormCompany = () => {
   const navigate = useNavigate();
@@ -82,32 +81,92 @@ const FormCompany = () => {
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
-    event.target.checkValidity();
+      event.target.checkValidity();
 
-    await fetch(`${URL_SERVER}/empresas`, {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-      body: JSON.stringify({
-        social: social,
-        fantasy_name: fantasyname,
-        CNPJ: CNPJ,
-        email: email,
-        CEP: CEP,
-        address: address,
-        number: number,
-        district: district,
-        city: city,
-        complement: complement,
-        coordinates: [latitude, longitude],
-      }),
-    });
-    alert("Empresa cadastrada com sucesso!");
-    navigate("/map");
+      if (!social) {
+        alert('Nome da empresa é obrigatório')
+        return;
+      }
+
+      if (!fantasyname) {
+        alert('Nome fantasia é obrigatório')
+        return;
+      }
+
+      if (!CNPJ) {
+        alert('CNPJ é obrigatório')
+        return;
+      }
+
+      if (!email) {
+        alert('Email é obrigatório')
+        return;
+      }
+
+      if (!CEP) {
+        alert('CEP é obrigatório')
+        return;
+      }
+      
+      if (!address) {
+        alert('Endereço é obrigatório')
+        return;
+      }
+
+      if (!number) {
+        alert('Número é obrigatório')
+        return;
+      }
+
+      if (!district) {
+        alert('Bairro é obrigatório')
+        return;
+      }
+
+      if (!city) {
+        alert('Cidade é obrigatória')
+        return;
+      }
+
+      if (!complement) {
+        alert('Complemento é obrigatório')
+        return;
+      }
+
+      if (!latitude) {
+        alert('Latitude é obrigatória')
+        return;
+      }
+
+      if (!longitude) {
+        alert('Longitude é obrigatória')
+        return;
+      }
+
+      await fetch(`${URL_SERVER}/empresas`, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          social: social,
+          fantasy_name: fantasyname,
+          CNPJ: CNPJ,
+          email: email,
+          CEP: CEP,
+          address: address,
+          number: number,
+          district: district,
+          city: city,
+          complement: complement,
+          coordinates: [latitude, longitude],
+        }),
+      });
+      alert("Empresa cadastrada com sucesso!");
+      navigate("/map");
     } catch (error) {
-      alert("Ocorreu um erro na sua requisição.")
+      alert("Ocorreu um erro na sua requisição.");
     }
   };
   return (
